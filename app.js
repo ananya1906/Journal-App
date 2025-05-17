@@ -31,6 +31,19 @@ app.use('/journals', journalRoutes);
 app.get('/', (req, res) => {
   res.send('Toddle Journal API is running...');
 });
+const { sequelize } = require('./models'); // adjust the path as needed
+
+sequelize.sync({ force: false })  // Use `force: true` only for debugging
+  .then(() => {
+    console.log('Database synced');
+    app.listen(process.env.PORT || 5000, () => {
+      console.log('Server is running...');
+    });
+  })
+  .catch((err) => {
+    console.error('Failed to sync database:', err);
+  });
+
 
 // 🚀 Start server
 app.listen(PORT, () => {
