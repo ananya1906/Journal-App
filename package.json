@@ -2,9 +2,8 @@
   "name": "toddle-journal",
   "version": "1.0.0",
   "main": "app.js",
-  "scripts": {
-  "start": "node app.js",
-  "dev": "nodemon app.js"
+"scripts": {
+  "start": "node app.js"
 },
 
   "keywords": [],
