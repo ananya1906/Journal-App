@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "72498eae-4491-44da-9838-f46e0229e61c",
+		"name": "Toddle Journal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45000137",
+		"_collection_link": "https://ananya-1911045.postman.co/workspace/Ananya's-Workspace~69b40f60-faf3-43f0-8475-893e03a97489/collection/45000137-72498eae-4491-44da-9838-f46e0229e61c?action=share&source=collection_link&creator=45000137"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login (Teacher or Student)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"teacher1@example.com\",\r\n  \"password\": \"teacher123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0NjMwNjAsImV4cCI6MTc0NzQ2NjY2MH0.77gfjAnsYoePrwQb9d4PUgPC3-NKRTCzdIhX9iIfF78",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/protected/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"protected",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login (Teacher or Student)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"alice@school.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create journals",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0NjMwNjAsImV4cCI6MTc0NzQ2NjY2MH0.77gfjAnsYoePrwQb9d4PUgPC3-NKRTCzdIhX9iIfF78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Painting activity in class\",\r\n  \"attachment_type\": \"image\",\r\n  \"attachment_url\": \"http://example.com/art.jpg\",\r\n  \"taggedStudentIds\": [2]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/journals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"journals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/protected/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"protected",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create journals",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Painting activity in class\",\r\n  \"attachment_type\": \"image\",\r\n  \"attachment_url\": \"http://example.com/art.jpg\",\r\n  \"taggedStudentIds\": [2]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/journals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"journals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Publish Journal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Publish Journal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/journals/1/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"journals",
+						"1",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Journal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Updated text\",\r\n  \"attachment_type\": \"pdf\",\r\n  \"attachment_url\": \"http://example.com/new.pdf\",\r\n  \"taggedStudentIds\": [2]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/journals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"journals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Journal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Updated text\",\r\n  \"attachment_type\": \"pdf\",\r\n  \"attachment_url\": \"http://example.com/new.pdf\",\r\n  \"taggedStudentIds\": [2]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/journals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"journals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Journal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Journal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/journals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"journals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher Feed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher Feed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/feed/teacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"feed",
+						"teacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Get Student Feed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Get Student Feed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE3NDc0Nzc1OTgsImV4cCI6MTc0NzQ4MTE5OH0.uJWbr8Fl_pG2-4R3f8LieicjMXVY_86j9cgLwLNjTIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/feed/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"feed",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Get Student Feed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3NDc0Nzk3MjksImV4cCI6MTc0NzQ4MzMyOX0.bvdWs00v0MN18lvQfCGzJ6R4xRk4ZTJo2WWBlADZQOg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/feed/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"feed",
+						"student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
