@@ -11,6 +11,14 @@ app.use(express.json());
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+const { sequelize } = require('./models');
+const seedUsers = require('./seeders/20250517060357-demo-users');
+
+sequelize.sync().then(() => {
+  seedUsers.up(); // Seed users after syncing the DB
+});
+
+
 
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
