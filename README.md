@@ -63,7 +63,7 @@ Postman Collection:
 
 CONCLUSION:
 
-The Toddle Journal API is a robust, role-based microservice built with Node.js and Express.
+This Journal API is a robust, role-based microservice built with Node.js and Express.
 It demonstrates the implementation of a secure authentication system using JSON Web
 Tokens (JWT) and provides a comprehensive set of REST endpoints that allow teachers to
 manage classroom journals and students to view journals in which they are tagged.
