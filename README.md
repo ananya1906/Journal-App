@@ -1,4 +1,4 @@
-OVERVIEW
+### Journal Overview
 
 This Journal App is a role-based journal logging backend app for teachers and students. Teachers can create journals and tag students. 
 Students can view journals they’re tagged in. Moreover, it provides a smooth backend execution process where teacher and student execute
